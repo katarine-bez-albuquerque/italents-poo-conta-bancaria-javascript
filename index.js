@@ -73,31 +73,36 @@ function validar(valor) {
 }
 
 console.log("");
-    
-var qtdContas = +prompt("Informe a quantidade de contas: ");
-validar(qtdContas);
 
-for(let i=0; i<qtdContas; i++) {
-    let opcao = +prompt("Informe se deseja: [1]-Conta | [2]-Poupança | [3]-Corrente: ");
-    validar(opcao);
-    switch(opcao) {
-        case 1: {
-            cadastrarContaGenerica();
-            console.log("");
-            break;
-        }
-        case 2: {
-            cadastarContaPoupanca();
-            console.log("");
-            break;
-        }
-        case 3: {
-            cadastrarContaCorrente();
-            console.log("");
-            break;
-        }
-        default: {
-            console.log("Opção inválida! Tente novamente.");
+try {
+    var qtdContas = +prompt("Informe a quantidade de contas: ");
+    validar(qtdContas);
+    
+    for(let i=0; i<qtdContas; i++) {
+        let opcao = +prompt("Informe se deseja: [1]-Conta | [2]-Poupança | [3]-Corrente: ");
+        validar(opcao);
+        switch(opcao) {
+            case 1: {
+                cadastrarContaGenerica();
+                console.log("");
+                break;
+            }
+            case 2: {
+                cadastarContaPoupanca();
+                console.log("");
+                break;
+            }
+            case 3: {
+                cadastrarContaCorrente();
+                console.log("");
+                break;
+            }
+            default: {
+                throw new Error("Opção inválida! Tente novamente.");
+            }
         }
     }
+}
+catch(error) {
+    console.log(`\n${error.message}\n`);
 }
