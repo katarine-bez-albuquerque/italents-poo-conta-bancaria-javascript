@@ -4,13 +4,15 @@ class ContaCorrente extends Conta {
 
     juros = 0;
 
-    constructor(titulo, saldo, juros) {
-        super(titulo, saldo);
-        this.juros = juros;
+    constructor(titulo) {
+        super(titulo);
+        this.juros = 0;
     }
 
     aplicarJuros() {
+        this.validar(this.juros);
         this.saldo += this.juros * 0.1;
+        console.log("\nJuros aplicado com sucesso!");
     }
 
     imprimir() {

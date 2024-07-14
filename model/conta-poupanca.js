@@ -3,13 +3,15 @@ const Conta = require('./conta');
 class ContaPoupanca extends Conta {
     rendimento = 0;
 
-    constructor(titulo, saldo, rendimento) {
-        super(titulo, saldo);
-        this.rendimento = rendimento;
+    constructor(titulo) {
+        super(titulo);
+        this.rendimento = 0;
     }
 
     aplicarRendimento() {
+        this.validar(this.rendimento);
         this.saldo += this.rendimento;
+        console.log("\nRendimento informado com sucesso!");
     }
 
     imprimir() {
