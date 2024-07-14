@@ -22,8 +22,11 @@ Simple banking system application in JavaScript with Node Js. With concepts of I
 
 * JavaScript
 * Node Js
-* Orientação a Objetos
 * prompt-sync
+* Orientação a Objetos
+* Laços de Repetição
+* Estruturas de Decisão
+* Lógica de Programação
 
 ### Instalar Dependências
 ##### (Install Dependencies)
