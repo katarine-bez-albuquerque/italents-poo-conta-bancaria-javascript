@@ -170,10 +170,7 @@ function escolherContas() {
                 break;
             }
             default: {
-                console.log("\nOpção inválida! Tente novamente.\n");
-                menuOpcoesDeConta();
-                opcao = +prompt("Deseja realizar mais alguma operação? Informe a opção do menu: ");
-                validar(opcao);
+                console.log("\nOpção inválida! Tente novamente.\n");                
             }
         }
         menuOpcoesDeConta();
